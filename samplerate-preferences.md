@@ -1,15 +1,15 @@
 # samplerate — Repo-Local Living Preferences
-> Exclusive repository-level preferences (the Living Preferences Law).
+> Repo-local preferences governed by the Living Documentation Law.
 > Universal Supreme Constitution: preferences.md (vexspoke).
-
-;;SYNC("mirrors ecosystem/vexspoke/preferences.md @ 2026.09-universal")
 
 ## 0. Constitution Link (supreme)
 - [preferences.md](https://github.com/vexgraph-dev/vexspoke/blob/main/preferences.md) (canonical, vexspoke) — accessible locally at ../../preferences.md
-- All universal laws in `preferences.md` are mandatory and binding across the ecosystem.
+- All universal laws in `../../../preferences.md` are mandatory and binding across the ecosystem.
 - This document codifies **exclusive** preferences that apply uniquely to `samplerate` (R4/R5 Audio Engine).
 
-## 1. Exclusive Preferences Binding Matrix
+## 1. Repo-Local Law Index (Binding Matrix)
+
+Universal laws are inherited from the canonical `../../../preferences.md` Index; this table indexes the additional laws specific to this repository.
 
 | Law Title | Scope | Enforcement |
 | :--- | :--- | :--- |
@@ -52,6 +52,6 @@ Lock contention between audio render threads and application logic causes priori
 
 ---
 
-## 4. Readiness Cross-Reference (the Living Feature Readiness Law)
+## 4. Readiness Cross-Reference (Living Documentation Law)
 
 - Feature readiness matrix tracked in [`../../_repositories/.ecosystem/samplerate.md`](../../_repositories/.ecosystem/samplerate.md) (rendered as `[[samplerate]]` wiki page).
