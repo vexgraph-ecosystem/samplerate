@@ -16,12 +16,12 @@ OS/window/memory management itself.
 
 ## Layout
 - Engine (future): `src/` — mixer, graph, spatializer, HAL glue via `vexspoke` audio.
-- Tests: umbrella `../../../tests` has no `samplerate/` partition yet; until then keep
-  seam tests in-repo under `../../../tests` (never inside source dirs, per the Test
-  Segregation Law).
+- Tests: the shared `tests/` repo will host a `tests/samplerate/` partition
+  (mirrored per unit, the Test Tree Mirror Law); no test file lives inside this
+  repo's source directories (the Test Segregation Law).
 
 ## Laws that govern work here
-- Constitution: `../../../preferences.md` (umbrella symlink → `../../vexspoke/preferences.md`).
+- Constitution: the universal [`preferences.md`](../../vexspoke/preferences.md) (canonical file at `ecosystem/vexspoke/preferences.md`; the workspace root links to it).
 - Commits land in THIS repo root, one cohesive unit each; never push unless asked.
 - Bounded Wait Law is load-bearing here: no unbounded waits on the audio path,
   ever — drop-degrade, keep the old buffer, move on.
