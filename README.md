@@ -25,14 +25,22 @@ audio thread. UI lives in `impedance`; this repo is sound only.
 Borrows shapes from R1–R4 (arenas, windows, GPU, UI) to build; owns no
 OS/window/memory management itself.
 
+R2 is split between Vexspoke CPU computation, synchronization and behavior and
+Relational Engine memory/storage, stable rows, bindings and native C search.
+Migration is staged: existing Vexspoke memory/container ABI and default allocator
+remain until explicit migration and owner proof. R1 owns lifetimes/residency;
+GPU shaders/dispatch remain Graphvex R3, including any future GPU DSP. No C/Rust
+atomic-layout compatibility, automatic schema migration or audio integration is
+implied. This DAW engine and the R5 application suite are unfinished.
+
 ## Layout
 - Engine (future): `src/` — mixer, graph, spatializer, HAL glue via `vexspoke` audio.
-- Tests: the shared `tests/` repo will host a `tests/samplerate/` partition
+- Tests: the shared `../../../tests` repo will host a `tests/samplerate/` partition
   (mirrored per unit, the Test Tree Mirror Law); no test file lives inside this
   repo's source directories (the Test Segregation Law).
 
 ## Laws that govern work here
-- Constitution: the universal [`preferences.md`](../../vexspoke/preferences.md) (canonical file at `ecosystem/vexspoke/preferences.md`; the workspace root links to it).
+- Constitution: the [canonical preferences.md Gist](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a); one real, Git-ignored workspace-root `../../../preferences.md`, not a Vexspoke file or symlink.
 - Commits land in THIS repo root, one cohesive unit each; never push unless asked.
 - Bounded Wait Law is load-bearing here: no unbounded waits on the audio path,
   ever — drop-degrade, keep the old buffer, move on.
