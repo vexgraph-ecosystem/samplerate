@@ -1,11 +1,11 @@
 # samplerate — Repo-Local Living Preferences
 > Repo-local preferences governed by the Living Documentation Law.
-> Universal Supreme Constitution: preferences.md (vexspoke).
+> Universal Supreme Constitution: workspace-root preferences.md, published on Gist.
 
 ## 0. Constitution Link (supreme)
-- [preferences.md](https://github.com/vexgraph-ecosystem/vexspoke/blob/main/preferences.md) (canonical, vexspoke) — accessible locally at ../../preferences.md
+- [preferences.md](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a) — real, Git-ignored workspace-root file at ../../../preferences.md, not a tracked Vexspoke file or symlink.
 - All universal laws in `../../../preferences.md` are mandatory and binding across the ecosystem.
-- This document codifies **exclusive** preferences that apply uniquely to `samplerate` (R4/R5 Audio Engine).
+- This document codifies **exclusive** preferences for `samplerate` (R4/R5 Audio Engine). Vexspoke supplies R2 CPU computation/synchronization/behavior; Relational Engine owns memory/storage/native C search. R1 supervises borrowed storage lifetimes. This blueprint does not replace the current allocator or prove Rust/C audio integration; GPU shaders/dispatch stay Graphvex R3.
 
 ## 1. Repo-Local Law Index (Binding Matrix)
 
@@ -54,4 +54,4 @@ Lock contention between audio render threads and application logic causes priori
 
 ## 4. Readiness Cross-Reference (Living Documentation Law)
 
-- Feature readiness matrix tracked in [`../../_repositories/.ecosystem/samplerate.md`](../../_repositories/.ecosystem/samplerate.md) (rendered as `[[samplerate]]` wiki page).
+- Feature readiness matrix: [samplerate](../../ecosystem/samplerate.md), rendered as `[[samplerate]]`.
