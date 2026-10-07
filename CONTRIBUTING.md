@@ -35,7 +35,12 @@ This codebase strictly enforces the verbose, explicit boilerplate required acros
 
 All architectural rules and style invariants are governed by the central constitution:
 
-- **[preferences.md](https://github.com/vexgraph-ecosystem/vexspoke/blob/main/preferences.md)** (tracked in `vexspoke`, accessible locally at `../../../preferences.md`)
+- **[preferences.md](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a)** (one real, Git-ignored workspace-root `../../../preferences.md`, not a tracked Vexspoke file or symlink)
 - **[samplerate-preferences.md](samplerate-preferences.md)** (repo-local mirror binding samplerate)
 
-Whenever preferences or conventions evolve, `../../../preferences.md` and `samplerate-preferences.md` are updated and committed locally in the same cycle (the Living Preferences Law / Zero Drift).
+Under the Living Documentation Law, update affected contracts in the same cycle.
+Universal changes are published to the existing Gist and byte-verified; repo-local
+documentation is committed locally under the Git Workflow Law. Never auto-push.
+Vexspoke owns R2 CPU computation/behavior; Relational Engine owns memory/storage
+and native C search. Migration is staged with unchanged default allocation; GPU
+DSP shaders/dispatch remain Graphvex R3. This DAW engine and R5 apps are unfinished.
