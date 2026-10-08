@@ -11,9 +11,22 @@ wired into it. IDE appearance is user-verified.
 Future builds belong to [b](https://github.com/vex-graph/b). No runnable audio
 target or standalone runtime build is claimed by this metadata entry.
 
-**Role:** R5 Interactable — realtime mixer, spatial audio, 3D HRTF. The DSP
-engine underneath the `impedance` workstation (`../../../projects/impedance`).
-**Status:** stub (LICENSE only; no engine code yet).
+## Current State
+
+**Role:** R5 interactable — realtime mixer, spatial audio and 3D HRTF: the DSP
+engine under the `impedance` workstation.
+
+**Implemented and proven:** nothing. This is a **source-free blueprint**:
+`README.md`, `CONTRIBUTING.md`, `LICENSE`, `samplerate-preferences.md`,
+`.gitignore` and an IDE-only `LANGUAGES NONE` `CMakeLists.txt`. No `src/`, header,
+test partition or build target.
+
+**Specified only:** the Zero-Allocation Audio Callback Law and the Lockless Ring
+Transport Law (forward contracts with nothing to bind yet), the mixer/graph/
+spatializer/HAL layout, and the `impedance` UI split.
+
+**Platforms proven:** none. (The readiness wiki grades some rows above 🟥, which
+is inflated relative to this zero-source tree.)
 
 ## What it is
 `samplerate` is the audio counterpart to `anti`/`semicolon`: a from-scratch
@@ -44,3 +57,16 @@ implied. This DAW engine and the R5 application suite are unfinished.
 - Commits land in THIS repo root, one cohesive unit each; never push unless asked.
 - Bounded Wait Law is load-bearing here: no unbounded waits on the audio path,
   ever — drop-degrade, keep the old buffer, move on.
+
+## Scope and Limitations
+
+**Scope (intended):** R5 audio engine — lockless realtime mixing, convolution and
+spatial/HRTF panning with zero steady-state allocation on the audio thread; the
+UI lives in `impedance`.
+
+**Deliberately not covered:** no OS/window/memory management (borrowed from
+R1–R4); GPU DSP remains Graphvex R3; it never owns host or consumer headers.
+
+**Known limits and gaps:** zero implementation — every contract above is
+specification only; no platform is proven and no `tests/samplerate/` partition
+exists.
