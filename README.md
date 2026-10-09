@@ -15,6 +15,8 @@ runtime build or hardware proof is claimed by this metadata entry.
 
 ## Current State
 
+**Draft — not finalized.** The R3 tier and this first slice are new and may change.
+
 **Role:** R3 native audio driver — CoreAudio/WASAPI/ALSA device output, PCM
 buffers, the synth/effect DSP graph and offline render/export. It is the engine
 under the R5 `impedance` DAW, not an application itself.
