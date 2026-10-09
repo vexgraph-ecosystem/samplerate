@@ -5,7 +5,7 @@
 ## 0. Constitution Link (supreme)
 - [preferences.md](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a) — real, Git-ignored workspace-root file at ../../../preferences.md, not a tracked Vexspoke file or symlink.
 - All universal laws in `../../../preferences.md` are mandatory and binding across the ecosystem.
-- This document codifies **exclusive** preferences for `samplerate` (R4/R5 Audio Engine). Vexspoke supplies R2 CPU computation/synchronization/behavior; Relational Engine owns memory/storage/native C search. R1 supervises borrowed storage lifetimes. This blueprint does not replace the current allocator or prove Rust/C audio integration; GPU shaders/dispatch stay Graphvex R3.
+- This document codifies **exclusive** preferences for `samplerate` (R3 native audio driver; sibling to `graphvex`). Vexspoke supplies R2 CPU computation/synchronization/behavior; Relational Engine owns memory/storage/native C search. Its own native CoreAudio/WASAPI/ALSA backend lives in-repo; the R5 DAW application is `impedance`. This blueprint does not replace the current allocator or prove Rust/C audio integration; GPU shaders/dispatch stay Graphvex R3.
 
 ## 1. Repo-Local Law Index (Binding Matrix)
 
@@ -13,8 +13,8 @@ Universal laws are inherited from the canonical `../../../preferences.md` Index;
 
 | Law Title | Scope | Enforcement |
 | :--- | :--- | :--- |
-| **Zero-Allocation Audio Callback Law** | R4/R5 Audio Engine | Mandatory for `samplerate` |
-| **Lockless Ring Transport Law** | R4/R5 Audio Engine | Mandatory for `samplerate` |
+| **Zero-Allocation Audio Callback Law** | R3 Audio Driver | Mandatory for `samplerate` |
+| **Lockless Ring Transport Law** | R3 Audio Driver | Mandatory for `samplerate` |
 
 ## 2. Exclusive Repo-Local Laws (FULL PROSE RESTATEMENT)
 
@@ -48,7 +48,7 @@ Lock contention between audio render threads and application logic causes priori
 
 ## 3. Repo-Local Extensions (managed, per the Conflict Triage Law)
 
-;;INTENTION("R4/R5 Audio Engine: lockless ring buffer transport; zero steady-state allocation in audio callback threads; bounded wait processing.")
+;;INTENTION("R3 Audio Driver: lockless ring buffer transport; zero steady-state allocation in audio callback threads; bounded wait processing; native CoreAudio/WASAPI/ALSA backend; the R5 DAW is impedance.")
 
 ---
 

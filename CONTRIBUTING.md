@@ -2,7 +2,7 @@
 
 This project is a strictly solo development process conducted in tight pair-programming partnership with an AI coding assistant.
 
-It serves as an architectural manifesto for **Level 4 Audio Engine and Level 5 DAW**: real-time audio streams, lockless ring buffer transport, zero steady-state allocation in audio callbacks, and bounded wait processing in pure C23.
+It serves as an architectural manifesto for the **R3 native audio driver**: real-time audio streams, lockless ring buffer transport, zero steady-state allocation in audio callbacks, and bounded wait processing in pure C23. The R5 DAW application is `impedance`; this repo is the sound engine it builds on.
 
 ---
 
@@ -43,4 +43,5 @@ Universal changes are published to the existing Gist and byte-verified; repo-loc
 documentation is committed locally under the Git Workflow Law. Never auto-push.
 Vexspoke owns R2 CPU computation/behavior; Relational Engine owns memory/storage
 and native C search. Migration is staged with unchanged default allocation; GPU
-DSP shaders/dispatch remain Graphvex R3. This DAW engine and R5 apps are unfinished.
+DSP shaders/dispatch remain Graphvex R3. This audio driver and the R5 applications
+are unfinished.
