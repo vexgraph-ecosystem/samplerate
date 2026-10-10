@@ -1,17 +1,7 @@
 # samplerate — R3 native audio driver (engine under the R5 impedance DAW)
 
-## CLion: CMake is IDE metadata only
-
-Open this repository root as a CMake project. `CMakeLists.txt` is an IDE-only
-adapter: it provides an excluded C23/Objective-C object target for navigation,
-diagnostics and inlay hints, using local `VEXSPOKE_SOURCE_DIR` and
-`RELATIONAL_ENGINE_SOURCE_DIR` header paths. Targets are excluded from the
-default build; no fake declarations, dependency downloads, linking or
-application runner are wired into it. Missing headers stay real IDE errors.
-IDE appearance is user-verified.
-
-Actual builds belong to [b](https://github.com/vex-graph/b). No standalone
-runtime build or hardware proof is claimed by this metadata entry.
+Build tooling is [b](https://github.com/vex-graph/b). The current audio slice
+still needs registered owner and hardware proof as described below.
 
 ## Current State
 
