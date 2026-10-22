@@ -1,15 +1,13 @@
 # samplerate — Repo-Local Living Preferences
-> Repo-local preferences governed by the Living Documentation Law.
-> Universal Supreme Constitution: workspace gist/PREFERENCES.md, published on Gist.
+> Governed by the Living Documentation Law; supreme authority is the published workspace constitution.
 
 ## 0. Constitution Link (supreme)
-- [preferences.md](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a) — real, Git-ignored workspace file at `../../gist/PREFERENCES.md`, not a tracked Vexspoke file or symlink.
-- All universal laws in `../../gist/PREFERENCES.md` are mandatory and binding across the ecosystem.
-- This document codifies **exclusive** preferences for `samplerate` (R3 native audio driver; sibling to `graphvex`). Vexspoke supplies R2 CPU computation/synchronization/behavior; Relational Engine owns memory/storage/native C search. Its own native CoreAudio/WASAPI/ALSA backend lives in-repo; the R5 DAW application is `impedance`. This blueprint does not replace the current allocator or prove Rust/C audio integration; GPU shaders/dispatch stay Graphvex R3.
+- [preferences.md](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a) — real, Git-ignored workspace file `../../gist/PREFERENCES.md`, not tracked in Vexspoke or symlinked; its universal laws bind all repositories.
+- `samplerate`-exclusive: R3 native audio driver, sibling to `graphvex`; Vexspoke supplies R2 CPU computation/synchronization/behavior; Relational Engine owns memory/storage/native C search; native CoreAudio/WASAPI/ALSA backends live here; R5 DAW `impedance` consumes samplerate. No allocator replacement or Rust/C audio integration proof; GPU shaders/dispatch remain Graphvex R3.
 
 ## 1. Repo-Local Law Index (Binding Matrix)
 
-Universal laws are inherited from the canonical `../../gist/PREFERENCES.md` Index; this table indexes the additional laws specific to this repository.
+Universal laws inherit from the canonical `../../gist/PREFERENCES.md` Index; this table indexes additional repository laws.
 
 | Law Title | Scope | Enforcement |
 | :--- | :--- | :--- |
@@ -21,13 +19,13 @@ Universal laws are inherited from the canonical `../../gist/PREFERENCES.md` Inde
 ### Zero-Allocation Audio Callback Law
 
 #### Definition:
-The real-time audio callback runs in a high-priority OS audio thread and must never execute heap allocation (`malloc`/`free`), system calls, file IO, or mutex locks.
+The high-priority OS real-time audio callback never allocates heap memory (`malloc`/`free`), makes system calls or file IO, or takes mutexes.
 
 #### The Why:
-Audio buffer deadlines are hard real-time constraints; a 5ms delay causes audible glitching and buffer underruns.
+Hard audio deadlines: 5ms delay can cause audible glitching and buffer underruns.
 
 #### The Rule:
-1. **Zero Malloc:** All audio buffers and DSP state are allocated at stream initialization.
+1. **Zero Malloc:** Allocate all audio buffers and DSP state at stream initialization.
 2. **Lock-Free Only:** Inter-thread communication uses wait-free ring buffers.
 
 ---
@@ -35,14 +33,14 @@ Audio buffer deadlines are hard real-time constraints; a 5ms delay causes audibl
 ### Lockless Ring Transport Law
 
 #### Definition:
-Audio sample packets move between playback/recording devices and DSP processing engines strictly over lockless single-producer single-consumer or multi-producer multi-consumer ring buffers.
+Playback/recording devices and DSP engines transport audio packets only through lockless single-producer single-consumer (SPSC) or multi-producer multi-consumer (MPMC) ring buffers.
 
 #### The Why:
-Lock contention between audio render threads and application logic causes priority inversion and dropouts.
+Lock contention between audio-render threads and application logic causes priority inversion and dropouts.
 
 #### The Rule:
-1. **Atomic Pointers:** Read and write indices are coordinated using atomic memory operations with acquire-release semantics.
-2. **Bounded Drift:** Buffer overflow or underflow gracefully fades or silences without deadlock.
+1. **Atomic Pointers:** Coordinate read/write indices with atomic operations using acquire-release semantics.
+2. **Bounded Drift:** Overflow or underflow fades or silences gracefully, without deadlock.
 
 ---
 
@@ -54,5 +52,5 @@ Lock contention between audio render threads and application logic causes priori
 
 ## 4. Readiness Cross-Reference (Living Documentation Law)
 
-- Feature readiness matrix: [samplerate](https://gist.github.com/vex-graph/6943f92acb931b25dad1073c46da6ce7#file-samplerate-md).
-- Open blockers and deferred decisions: [ecosystem blockers Gist](https://gist.github.com/vex-graph/e921fa188eebbd0c68c4e59646109887).
+- Readiness matrix: [samplerate](https://gist.github.com/vex-graph/6943f92acb931b25dad1073c46da6ce7#file-samplerate-md).
+- Open blockers/deferred decisions: [ecosystem blockers Gist](https://gist.github.com/vex-graph/e921fa188eebbd0c68c4e59646109887).
