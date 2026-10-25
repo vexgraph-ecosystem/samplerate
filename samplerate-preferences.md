@@ -2,7 +2,7 @@
 > Universal constitution: `gist.md` is the compressed law list; `PREFERENCES.md` is its rationale.
 
 ## 0. Constitution Link (supreme)
-- [gist.md](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a#file-gist-md) — the compressed law list, mirrored in this workspace at `../../../metadata/gists/preferences/gist.md`. It is the only normative law text; `../../../PREFERENCES.md` carries the rationale and is never ingested whole. Numbers are slice addresses inside one file, never law identity: cite by Title.
+- [gist.md](https://gist.github.com/vex-graph/4132a6c45cb6d3797c3e8eff2e94035a#file-gist-md) — the compressed law list, mirrored in this workspace at `../../../metadata/gists/preferences/gist.md`. It is the only normative law text; `../../../metadata/gists/preferences/PREFERENCES.md` carries the rationale and is never ingested whole. Numbers are slice addresses inside one file, never law identity: cite by Title.
 - All universal laws bind all repositories. Read one on demand from the workspace root: `./tools/prefs law "<title>"`, `./tools/prefs section "<section>"`, `./tools/prefs repo <name>`.
 - `samplerate`-exclusive: R3 native audio driver, sibling to `graphvex`; Vexspoke supplies R2 CPU computation/synchronization/behavior; Relational Engine owns memory/storage/native C search; native CoreAudio/WASAPI/ALSA backends live here; R5 DAW `impedance` consumes samplerate. No allocator replacement or Rust/C audio integration proof; GPU shaders/dispatch remain Graphvex R3.
 
