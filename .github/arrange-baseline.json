@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "note": "Ratchet baseline: CI fails only when a file/rule count grows.",
+  "total": 309,
+  "counts": {
+    "src/audio/audio_buffer.c::Semantic Consistency Law (Control flow: header space)": 27,
+    "src/audio/audio_buffer.c::Semantic Consistency Law (Control flow: statement separation)": 90,
+    "src/audio/audio_format.c::Semantic Consistency Law (Control flow: header space)": 12,
+    "src/audio/audio_format.c::Semantic Consistency Law (Control flow: statement separation)": 40,
+    "src/core/audio_memory.c::Semantic Consistency Law (Control flow: header space)": 6,
+    "src/core/audio_memory.c::Semantic Consistency Law (Control flow: statement separation)": 10,
+    "src/platform/audio_stream_cocoa.m::Semantic Consistency Law (Control flow: header space)": 20,
+    "src/platform/audio_stream_cocoa.m::Semantic Consistency Law (Control flow: statement separation)": 77,
+    "src/platform/audio_stream_stub.c::Semantic Consistency Law (Control flow: header space)": 4,
+    "src/platform/audio_stream_stub.c::Semantic Consistency Law (Control flow: statement separation)": 17,
+    "src/stream/audio_stream.h::Semantic Consistency Law (Control flow: statement separation)": 6
+  }
+}
